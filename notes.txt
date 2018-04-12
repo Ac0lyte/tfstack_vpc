@@ -1,0 +1,62 @@
+## First run
+
+ok: [localhost] => {
+    "new_user": {
+        "changed": true, 
+        "failed": false, 
+        "groups": null, 
+        "keys": [
+            {
+                "access_key_id": "XXXXXXXXXXXXXXXXXXXXXXXX", 
+                "create_date": "2018-03-06T15:20:13Z", 
+                "status": "Active", 
+                "user_name": "terraform"
+            }
+        ], 
+        "user_meta": {
+            "access_keys": [
+                {
+                    "access_key_id": "XXXXXXXXXXXXXXXXXXXXXXXX", 
+                    "access_key_selector": "HMAC", 
+                    "create_date": "2018-03-06T15:20:13.007Z", 
+                    "secret_access_key": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+                    "status": "Active", 
+                    "user_name": "terraform"
+                }
+            ], 
+            "created_user": {
+                "arn": "arn:aws:iam::123456789012:user/terraform", 
+                "create_date": "2018-03-06T15:20:12.908Z", 
+                "path": "/", 
+                "user_id": "XXXXXXXXXXXXXXXXXXXXXXXX", 
+                "user_name": "terraform"
+            }, 
+            "password": null
+        }
+    }
+}
+
+
+## Second run
+
+ok: [localhost] => {
+    "new_user": {
+        "changed": false, 
+        "created_keys": [], 
+        "failed": false, 
+        "groups": null, 
+        "keys": {
+            "XXXXXXXXXXXXXXXXXXXXXXXX": "Active"
+        }, 
+        "user_meta": {
+            "access_keys": [
+                {
+                    "access_key_id": "XXXXXXXXXXXXXXXXXXXXXXXX", 
+                    "status": "Active"
+                }
+            ]
+        }, 
+        "user_name": "terraform"
+    }
+}
+

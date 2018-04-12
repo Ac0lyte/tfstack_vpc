@@ -1,0 +1,7 @@
+# ToDo
+Admin Server
+   - OpenVPN 
+   - GoCD
+   - Jenkins
+   - graphana
+	- AWS CloudWatch data
